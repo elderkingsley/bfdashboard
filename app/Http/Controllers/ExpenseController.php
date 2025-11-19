@@ -22,7 +22,8 @@ class ExpenseController extends Controller
      */
     public function index()
     {
-        return view('expense.index');
+        $expenses = Expense::paginate(10);
+        return view('expense.index', compact('expenses'));
     }
 
     /**
@@ -63,7 +64,7 @@ class ExpenseController extends Controller
      */
     public function show(Expense $expense)
     {
-        return view('expense.show');
+        return view('expense.show', compact('expense'));
     }
 
     /**
@@ -71,7 +72,7 @@ class ExpenseController extends Controller
      */
     public function edit(Expense $expense)
     {
-        return view('expense.edit');
+        return view('expense.edit', compact('expense'));
     }
 
     /**
@@ -79,14 +80,28 @@ class ExpenseController extends Controller
      */
     public function update(Request $request, Expense $expense)
     {
-        //
+         $request->validate([
+            'date' => 'required|date',
+            'expense' => 'required|string|max:255',
+            'amount' => 'required|decimal:0,2',
+            'beneficiary' => 'required|string|max:255',
+            'narration' => 'required|string|max:255',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048',
+        ]);
+
+        $customer->update($request->all());
+
+        return redirect()->route('expense.index')->with('status', 'Expense updated successfully.');
     }
+
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Expense $expense)
+        public function destroy(Expense $expense)
     {
-        //
+        $customer->delete();
+
+        return redirect()->route('expense.index')->with('status', 'Expense deleted successfully.');
     }
 }

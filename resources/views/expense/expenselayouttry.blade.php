@@ -10,8 +10,9 @@
     <title>{{ config('app.name', 'Backyard Farms') }}</title>
     <link rel="stylesheet" href="{{ asset('main/css/style.css') }}">
     <link href='https://cdn.boxicons.com/3.0.3/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/78813c08bd.js" crossorigin="anonymous"></script>
-    
+
 
     </head>
 <body>
