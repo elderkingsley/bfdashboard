@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Raleway", sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.form-box{
+    width: 100%;
+    max-width: 500px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #465a31;
+    padding: 0px 60px 50px;
+    text-align: left;
+}
+
+
+
+.form-box h1{
+font-family: Raleway;
+font-size: 22px;
+font-weight: 500;
+line-height: 28.18px;
+text-align: center;
+margin-bottom: 50px;
+margin-top: -5px;
+
+color: #fff;
+
+}
+
+.h1{
+
+    padding-top: 30px;
+}
+
+.img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  padding-top: 40px;
+}
+
+.input-field{
+    background:  #FFF;
+    margin: 25px 0;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.input-term{
+    margin: 25px 0;
+    display: flex;
+    height: 45px;
+    align-items: center;
+}
+
+.input-term label{
+    display: block;
+    color: #fff;
+    font-size: 16px;
+}
+
+.input-term input{
+    width: 10%;
+    margin: 25px 0;
+}
+
+.input-term a{
+color: #669933;
+text-decoration: none;
+}
+
+
+
+
+
+.input-sign-in{
+    height: 45px;
+}
+
+.input-sign-in label{
+    color: #fff;
+    font-size: 16px;
+    margin-left: 60px;
+
+}
+
+
+.input-sign-in a{
+color: #669933;
+text-decoration: none;
+}
+
+
+
+input{
+    width: 100%;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    padding: 18px 15px;
+}
+
+.input-field i{
+    margin-left: 15px;
+}
+
+
+
+.submit{
+    width: 200px;
+    display: flex;
+    margin: 0px 0px 20px 130px;
+
+}
+
+.submit button{
+    flex-basis: 50%;
+    background: #fff;
+    color: #003366;
+    height: 40px;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: background 1s;
+    font-size: 20px;
+    font-weight: 400;
+
+
+
+}
