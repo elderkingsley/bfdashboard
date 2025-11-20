@@ -38,7 +38,6 @@
                                             <td>{{ $expense->beneficiary }}</td>
                                             <td>
                                                 <a href="{{ route('expense.edit', $expense->expense_id) }}" class="btn btn-success">Edit</a>
-                                                <a href="{{ route('expense.show', $expense->expense_id) }}" class="btn btn-info">View</a>
                                                <form action="{{ route('expense.destroy', $expense->expense_id) }}" method="POST" class="d-inline">
                                                     @csrf
                                                     @method('DELETE')
