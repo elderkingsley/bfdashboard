@@ -1,7 +1,7 @@
 @extends('expense.expenselayouttry')
 @section('content')
 
-<div class="container1">
+<div class="container1 ">
 		<div class="form-box">
 			
 		        <img src="{{ asset('images/bf_logo(1)-Photoroom.png') }}" class="img">
@@ -9,7 +9,7 @@
 			<h1>Expense Voucher</h1>
 			<form class="form" action="{{ route('expense.store') }}" method="POST" enctype="multipart/form-data">
 	@csrf
-	<div class="input-group">
+	<div class="input-group-prepend col-12">
 		<div class="input-field">
 			<i class="fa-solid fa-calendar-days"></i>
 			<input type="date" id="date" name="date" placeholder="mm-dd-yyyy" value="" required>
@@ -19,7 +19,6 @@
 				<i class="fa-solid fa-list"></i>
 					<select class="expense" name="expense" id="expense" required>
 						<option value="" disabled selected>Expense Category</option>
-						<i class="fa-solid fa-van-shuttle"></i>
 						<option value="snail">Snails Purchase</option>
 						<option value="telephone_and_internet">Telephone & Internet</option>
 						<option value="transportation">Transportation</option>
@@ -42,10 +41,18 @@
 			<i class="fa-solid fa-comment-dots"></i>
 			<input type="text" id="narration" name="narration" placeholder="Expense Narration" required>  
 		</div>
+		
 		<div class="input-field">
-			<i class="fa-solid fa-person"></i>
-			<input type="text" id="beneficiary" name="beneficiary" placeholder="Expense Beneficiary" required>  
+			<div class="select">
+				<i class="fa-solid fa-person"></i>
+					<select class="beneficiary" name="beneficiary" id="beneficiary" required>
+						<option value="" disabled selected>Spending Staff</option>
+						<option value="roselyn">Roselyn</option>
+						<option value="kingsley">Kingsley</option>		
+					</select>
+			</div>
 		</div>
+
 		<div class="input-field">
 			<i class="fa-solid fa-receipt"></i>
 			<input type="file" accept="image/*" capture="environment" name="image" id="image"> 
